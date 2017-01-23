@@ -1,0 +1,23 @@
+{
+  "name": "mooselog",
+  "version": "0.1.0",
+  "description": "a logger for node/express based on log4js",
+  "main": "logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "log",
+    "elk",
+    "node",
+    "express"
+  ],
+  "author": "mnebuerquo",
+  "license": "MIT",
+  "dependencies": {
+    "log4js": "^1.1.0",
+    "log4js-logstash": "^0.2.3",
+    "on-finished": "^2.3.0",
+    "ulid": "^0.1.0"
+  }
+}
