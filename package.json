@@ -19,5 +19,14 @@
     "log4js-logstash": "^0.2.3",
     "on-finished": "^2.3.0",
     "ulid": "^0.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnebuerquo/mooselog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mnebuerquo/mooselog/issues"
+  },
+  "homepage": "https://github.com/mnebuerquo/mooselog#readme"
 }
