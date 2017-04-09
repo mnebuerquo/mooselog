@@ -132,7 +132,7 @@ function init(config){
 		}
 		]
 	};
-	if(undefined === config.console || config.console){
+	if(!config.logger || undefined === config.logger.console || config.logger.console){
 		options.appenders.unshift( {
 			"category": "logstash",
 			"type": "console"
