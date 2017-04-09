@@ -122,10 +122,6 @@ function init(config){
 
 	var options = {
 		"appenders": [
-		{ 
-			"category": "logstash",
-			"type": "console" 
-		},
 		{
 			"category": "logstash",
 			"type": "log4js-logstash",
@@ -136,15 +132,20 @@ function init(config){
 		}
 		]
 	};
+	if(config.console){
+		options.appenders.unshift( {
+			"category": "logstash",
+			"type": "console"
+		})
+	}
 	log4js.configure( options );
 	var logger = log4js.getLogger('logstash');
 
-	// wrap the log function so it converts a string arg to 
+	// wrap the log function so it converts a string arg to
 	// an object with a message
 	var logfn = logger.log;
 	logger.log = (function(){
 		var args = Array.prototype.slice.call(arguments);
-		console.log(args);
 		var level = args[0];
 		var rest = args.slice(1);
 		if(typeof args[0] === 'string' || args[0] instanceof String){
